@@ -3,4 +3,4 @@
 config_version = 1
 
 # Network interface to prefer for this unit, for network
-network_interface = "wlan0"
+network_interface = "eth0"

@@ -14,13 +14,13 @@ worker_shutdown_wait_s = 10
 
 # Include this key if using the built-in AutoSSH functionality for remote access and data upload.
 # It can be ignored if you are using a different network uplink method not requiring SSH
-[autossh]
+# [autossh]
 # Hostname of the server to connect to
-server_hostname = "proxy.nsstc.uah.edu"
+# server_hostname = "proxy.nsstc.uah.edu"
 # Username to use on the server
-server_username = "mjolnir"
+# server_username = "mjolnir"
 # Base offset to the tunnel port to expose on the server (port = offset + unit_number)
-tunnel_port_offset = 10000
+# tunnel_port_offset = 10000
 
 # List custom steps or override default preset settings here under the [steps] key
 [steps.monitor_csv_output]
@@ -45,6 +45,5 @@ monitor_interval_s = 10
 monitor_input_steps = [
     "builtins.inputs.current_time",
     "builtins.inputs.run_time",
-    "example.inputs.ping",
 ]
 monitor_output_steps = [ "monitor_csv_output" ]
