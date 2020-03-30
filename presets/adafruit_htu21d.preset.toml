@@ -19,8 +19,6 @@ brokkr_version_min = "0.3.0"
 htu21d_temperature = { full_name = "Temperature (HTU21D)", conversion = "custom", binary_type = "f", unit = "C", uncertainty = 1.0, custom_attrs.adafruit_property = "temperature", digits = 3 }
 htu21d_humidity = { full_name = "Humidity (HTU21D)", conversion = "custom", binary_type = "f", unit = "%", uncertainty = 2.0, custom_attrs.adafruit_property = "relative_humidity", digits = 3 }
 
-# Presets are categorized into "input", "output", "commands", etc. (not required but good practice)
-
 # The main Adafruit HTU21D data input
 [inputs.htu21d]
 _module_path = "brokkr.inputs.adafruiti2c"

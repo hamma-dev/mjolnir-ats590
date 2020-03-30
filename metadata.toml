@@ -14,6 +14,8 @@ description = "System configuration for the ATS590 Low Cost Environmental Sensin
 homepage = "https://www.uah.edu"
 # Repository containing the system's source code
 repo = "https://github.com/hamma-dev/mjolnir-ats590"
+# SPDX license identifier for the this configuration package (MIT/Expat)
+license = "MIT"
 
 # Version of the config package; should follow SemVer and PEP 396
 version = "0.1.0"
