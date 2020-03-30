@@ -45,5 +45,6 @@ monitor_interval_s = 10
 monitor_input_steps = [
     "builtins.inputs.current_time",
     "builtins.inputs.run_time",
+    "adafruit_htu21d.inputs.htu21d",
 ]
 monitor_output_steps = [ "monitor_csv_output" ]
