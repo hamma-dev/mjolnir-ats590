@@ -16,8 +16,8 @@ brokkr_version_min = "0.3.0"
 
 # Data types referenced in individual presets
 [data_types]
-htu21d_temperature = { full_name = "Temperature (HTU21D)", conversion = "custom", binary_type = "f", unit = "C", uncertainty = 1.0, custom_attrs.adafruit_property = "temperature", digits = 3, range_min = -30, range_max = 90 }
-htu21d_humidity = { full_name = "Humidity (HTU21D)", conversion = "custom", binary_type = "f", unit = "%", uncertainty = 2.0, custom_attrs.adafruit_property = "relative_humidity", digits = 3, range_min = 5, range_max = 95 }
+htu21d_temperature = { full_name = "Temperature (HTU21D)", conversion = "custom", binary_type = "f", unit = "C", uncertainty = 1.0, custom_attrs.property_name = "temperature", digits = 3, range_min = -30, range_max = 90 }
+htu21d_humidity = { full_name = "Humidity (HTU21D)", conversion = "custom", binary_type = "f", unit = "%", uncertainty = 2.0, custom_attrs.property_name = "relative_humidity", digits = 3, range_min = 5, range_max = 95 }
 
 # The main Adafruit HTU21D data input
 [inputs.htu21d]
@@ -26,8 +26,8 @@ _class_name = "AdafruitI2CInput"
 # Dependencies required by all inputs in this device preset
 _dependencies = [ "adafruit-circuitpython-HTU21D" ]
 name = "HTU21DF Temp & Humidity Sensor"
-adafruit_module = "adafruit_htu21d"
-adafruit_class = "HTU21D"
+sensor_module = "adafruit_htu21d"
+sensor_class = "HTU21D"
 data_types = [
     "htu21d_temperature",
     "htu21d_humidity",
