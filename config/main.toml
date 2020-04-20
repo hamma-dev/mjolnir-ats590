@@ -35,6 +35,14 @@ name = "Monitoring CSV Output"
 output_path = "monitoring"
 filename_kwargs = { output_type = "monitoring" }
 
+[steps.dht11_input]
+_preset = "adafruit_dht.inputs.dht11"
+pin = 17
+
+[steps.dht22_input]
+_preset = "adafruit_dht.inputs.dht22"
+pin = 27
+
 # List pipelines to run here under the [pipelines] key
 [pipelines.monitor]
 # Custom builder for this pipeline, e.g. a streamlined builder for monitoring pipelines
@@ -49,5 +57,7 @@ monitor_input_steps = [
     "builtins.inputs.current_time",
     "builtins.inputs.run_time",
     "adafruit_htu21d.inputs.htu21d",
+    "dht11_input",
+    "dht22_input",
 ]
 monitor_output_steps = [ "monitor_csv_output" ]
