@@ -43,6 +43,10 @@ pin = 17
 _preset = "adafruit_dht.inputs.dht22"
 pin = 27
 
+[steps.ec5_input]
+_preset = "meter_ech2o.inputs.ec5_ads1115"
+adc_channel = 2
+
 # List pipelines to run here under the [pipelines] key
 [pipelines.monitor]
 # Custom builder for this pipeline, e.g. a streamlined builder for monitoring pipelines
@@ -59,5 +63,6 @@ monitor_input_steps = [
     "adafruit_htu21d.inputs.htu21d",
     "dht11_input",
     "dht22_input",
+    "ec5_input",
 ]
 monitor_output_steps = [ "monitor_csv_output" ]
