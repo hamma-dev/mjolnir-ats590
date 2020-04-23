@@ -1,0 +1,34 @@
+config_version = 1
+# Name of this device preset, used for lookup
+name = "adafruit_sht31"
+# Type of this preset; currently the only type is device
+type = "device"
+
+# Preset-level metadata; format follows that specified in the top-level
+[metadata]
+name_full = "Adafruit SHT31-D Temp and Humidity Sensor"
+author = "C.A.M. Gerlach"
+description = "Device preset for reading the Adafruit SHT31-D I2C Temp/Humidity sensor"
+homepage = "https://www.Gerlach.CAM"
+repo = "https://github.com/CAM-Gerlach"
+preset_version = "0.1.0"
+brokkr_version_min = "0.3.0"
+
+# Data types referenced in individual presets
+[data_types]
+sht31_temperature = { full_name = "Temperature (SHT31-D)", conversion = "custom", binary_type = "f", unit = "C", uncertainty = 0.3, custom_attrs.property_name = "temperature", digits = 3, range_min = -40, range_max = 125 }
+sht31_humidity = { full_name = "Humidity (SHT31-D)", conversion = "custom", binary_type = "f", unit = "%", uncertainty = 2.0, custom_attrs.property_name = "relative_humidity", digits = 3, range_min = 0, range_max = 100 }
+
+# The Adafruit SHT31-D data input
+[inputs.sht31d]
+_module_path = "brokkr.inputs.adafruiti2c"
+_class_name = "AdafruitI2CInput"
+# Dependencies required by this specific input preset
+_dependencies = [ "adafruit-circuitpython-sht31d" ]
+name = "SHT31-D Temp & Humidity Sensor"
+sensor_module = "adafruit_sht31d"
+sensor_class = "SHT31D"
+data_types = [
+    "sht31_temperature",
+    "sht31_humidity",
+]
