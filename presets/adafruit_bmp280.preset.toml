@@ -1,0 +1,34 @@
+config_version = 1
+# Name of this device preset, used for lookup
+name = "adafruit_bmp280"
+# Type of this preset; currently the only type is device
+type = "device"
+
+# Preset-level metadata; format follows that specified in the top-level
+[metadata]
+name_full = "Adafruit BMP280 Temp and Pressure Sensor"
+author = "C.A.M. Gerlach"
+description = "Device preset for reading the Adafruit BMP280 I2C/SPI Temperature/Pressure sensor"
+homepage = "https://www.Gerlach.CAM"
+repo = "https://github.com/CAM-Gerlach"
+preset_version = "0.1.0"
+brokkr_version_min = "0.3.0"
+
+# Data types referenced in individual presets
+[data_types]
+bmp280_temperature = { full_name = "Temperature (BMP280)", conversion = "custom", binary_type = "f", unit = "C", uncertainty = 0.3, custom_attrs.property_name = "temperature", digits = 3, range_min = -20, range_max = 65 }
+bmp280_pressure = { full_name = "Pressure (BMP280)", conversion = "custom", binary_type = "f", unit = "hPa", uncertainty = 1.0, custom_attrs.property_name = "pressure", digits = 3, range_min = 300, range_max = 1100 }
+
+# Adafruit BMP280 I2C input
+[inputs.bmp280_i2c]
+_module_path = "brokkr.inputs.adafruiti2c"
+_class_name = "AdafruitI2CInput"
+# Dependencies required by this specific input preset
+_dependencies = [ "adafruit-circuitpython-bmp280" ]
+name = "BMP280 I2C Temp & Pressure Sensor"
+sensor_module = "adafruit_bmp280"
+sensor_class = "Adafruit_BMP280_I2C"
+data_types = [
+    "bmp280_temperature",
+    "bmp280_pressure",
+]
