@@ -64,5 +64,6 @@ monitor_input_steps = [
     "dht11_input",
     "dht22_input",
     "ec5_input",
+    "adafruit_sht31.inputs.sht31d",
 ]
 monitor_output_steps = [ "monitor_csv_output" ]
