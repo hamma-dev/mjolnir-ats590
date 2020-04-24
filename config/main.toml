@@ -67,5 +67,6 @@ monitor_input_steps = [
     "adafruit_sht31.inputs.sht31d",
     "adafruit_bmp280.inputs.bmp280_i2c",
     "adafruit_bme280.inputs.bme280_i2c",
+    "adafruit_si7021.inputs.si7021",
 ]
 monitor_output_steps = [ "monitor_csv_output" ]
