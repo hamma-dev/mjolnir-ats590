@@ -54,20 +54,20 @@ _builder = "monitor"
 # Name of this pipeline for UI text and log messages
 name = "Monitoring"
 # Custom settings for this pipeline type: here, the interval in s to run monitoring
-monitor_interval_s = 10
+monitor_interval_s = 60
 # Most pipeline builders will need one or more lists of steps.
 # These are either names of steps in the [steps] table, or preset names as above
 monitor_input_steps = [
     "builtins.inputs.current_time",
     "builtins.inputs.run_time",
     "adafruit_sht31.inputs.sht31d",
-    "adafruit_htu21d.inputs.htu21d",
+    # "adafruit_htu21d.inputs.htu21d",
     "adafruit_si7021.inputs.si7021",
     "adafruit_mpl3115a2.inputs.mpl3115a2",
-    "adafruit_bmp280.inputs.bmp280_i2c",
+    # "adafruit_bmp280.inputs.bmp280_i2c",
     "adafruit_bme280.inputs.bme280_i2c",
-    "dht11_input",
-    "dht22_input",
-    "ec5_input",
+    # "dht11_input",
+    # "dht22_input",
+    # "ec5_input",
 ]
 monitor_output_steps = [ "monitor_csv_output" ]
