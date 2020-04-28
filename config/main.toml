@@ -47,6 +47,10 @@ pin = 27
 _preset = "meter_ech2o.inputs.ec5_ads1115"
 adc_channel = 2
 
+[steps.raingauge_tipb]
+_preset = "raingauge_tipb.inputs.raingauge_tipb"
+pin = 21
+
 # List pipelines to run here under the [pipelines] key
 [pipelines.monitor]
 # Custom builder for this pipeline, e.g. a streamlined builder for monitoring pipelines
@@ -69,5 +73,6 @@ monitor_input_steps = [
     "dht11_input",
     "dht22_input",
     "ec5_input",
+    "raingauge_tipb",
 ]
 monitor_output_steps = [ "monitor_csv_output" ]
