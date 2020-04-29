@@ -84,5 +84,6 @@ monitor_input_steps = [
     "raingauge_tipb",
     "anemometer_count",
     "anemometer_analog",
+    "maxim_temp_ds.inputs.dsxxxx",
 ]
 monitor_output_steps = [ "monitor_csv_output" ]

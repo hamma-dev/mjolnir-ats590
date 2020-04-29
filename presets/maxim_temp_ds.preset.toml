@@ -1,0 +1,33 @@
+config_version = 1
+# Name of this device preset, used for lookup
+name = "maxim_temp_ds"
+# Type of this preset; currently the only type is device
+type = "device"
+# Dependencies required by all input presets in this device
+_dependencies = [ "w1thermsensor" ]
+
+# Preset-level metadata; format follows that specified in the top-level
+[metadata]
+name_full = "Maxim DSxxx-series 1-wire Temp Sensors"
+author = "C.A.M. Gerlach"
+description = "Device preset for reading the Maxim DSxxx-series 1-wire temperature sensors"
+homepage = "https://www.Gerlach.CAM"
+repo = "https://github.com/CAM-Gerlach"
+preset_version = "0.1.0"
+brokkr_version_min = "0.3.0"
+
+# Data types referenced in individual presets
+[data_types]
+maxim_ds_temperature = { full_name = "Temperature (DSxxxx)", conversion = "custom", binary_type = "f", unit = "C", uncertainty = 0.5, custom_attrs.function_name = "get_temperature", digits = 3, range_min = -55, range_max = 125 }
+
+# The main Maxim DSxxxx data input
+[inputs.dsxxxx]
+_module_path = "brokkr.pipeline.baseinput"
+_class_name = "MethodInputStep"
+_dependencies = ""
+name = "Maxin DSxxxx-series 1-wire Temp Sensors"
+sensor_module = "w1thermsensor"
+sensor_class = "W1ThermSensor"
+data_types = [
+    "maxim_ds_temperature",
+]
