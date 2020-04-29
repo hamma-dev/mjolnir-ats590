@@ -1,0 +1,43 @@
+config_version = 1
+# Name of this device preset, used for lookup
+name = "anemometer_analog"
+# Type of this preset; currently the only type is device
+type = "device"
+
+# Preset-level metadata; format follows that specified in the top-level
+[metadata]
+name_full = "Analog Anemometer Direction"
+author = "C.A.M. Gerlach"
+description = "Device preset for a generic analog directional anemometer"
+homepage = "https://www.Gerlach.CAM"
+repo = "https://github.com/CAM-Gerlach"
+preset_version = "0.1.0"
+brokkr_version_min = "0.3.0"
+
+# Data types referenced in individual presets
+[data_types]
+anemometer_direction = { conversion = "custom", binary_type = "f", unit = "degrees", custom_attrs.property_name = "voltage", digits = 2, full_name = "Anemometer Direction", scale = 0.0032014, offset = 4.66, base = 2, power = 15, range_min = 0, range_max = 360 }
+
+[inputs.wind_direction_ads1015]
+_module_path = "brokkr.inputs.adafruitadc"
+_class_name = "AdafruitADCInput"
+# Dependencies required by this specific input preset
+_dependencies = [ "adafruit-circuitpython-ads1x15" ]
+name = "Analog Anemometer Direction ADS1015"
+sensor_module = "adafruit_ads1x15.ads1015"
+sensor_class = "ADS1015"
+data_types = [
+    "anemometer_direction",
+]
+
+[inputs.wind_direction_ads1115]
+_module_path = "brokkr.inputs.adafruitadc"
+_class_name = "AdafruitADCInput"
+# Dependencies required by this specific input preset
+_dependencies = [ "adafruit-circuitpython-ads1x15" ]
+name = "Analog Anemometer Direction ADS1115"
+sensor_module = "adafruit_ads1x15.ads1115"
+sensor_class = "ADS1115"
+data_types = [
+    "anemometer_direction",
+]

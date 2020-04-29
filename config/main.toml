@@ -55,6 +55,10 @@ pin = 21
 _preset = "anemometer_count.inputs.anemometer_count"
 pin = 26
 
+[steps.anemometer_analog]
+_preset = "anemometer_analog.inputs.wind_direction_ads1115"
+adc_channel = 0
+
 # List pipelines to run here under the [pipelines] key
 [pipelines.monitor]
 # Custom builder for this pipeline, e.g. a streamlined builder for monitoring pipelines
@@ -79,5 +83,6 @@ monitor_input_steps = [
     "ec5_input",
     "raingauge_tipb",
     "anemometer_count",
+    "anemometer_analog",
 ]
 monitor_output_steps = [ "monitor_csv_output" ]
