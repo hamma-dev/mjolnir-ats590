@@ -32,6 +32,7 @@ rain_rate_tibp_1hour = { type_presets = "rain_rate", full_name = "Rain Rate (1 h
 [inputs.raingauge_tipb]
 _module_path = "brokkr.inputs.gpiocounter"
 _class_name = "GPIOCounterInput"
+_dependencies = []
 name = "Tipping Bucket Rain Gauge"
 max_counts = 100000
 gpio_kwargs.pull_up = true

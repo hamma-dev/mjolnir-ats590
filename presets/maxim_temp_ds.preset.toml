@@ -24,7 +24,7 @@ maxim_ds_temperature = { full_name = "Temperature (DSxxxx)", conversion = "custo
 [inputs.dsxxxx]
 _module_path = "brokkr.pipeline.baseinput"
 _class_name = "MethodInputStep"
-_dependencies = ""
+_dependencies = []
 name = "Maxin DSxxxx-series 1-wire Temp Sensors"
 sensor_module = "w1thermsensor"
 sensor_class = "W1ThermSensor"

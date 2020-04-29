@@ -32,6 +32,7 @@ wind_speed_gpio_10minute = { type_presets = "wind_speed", full_name = "Wind Spee
 [inputs.anemometer_count]
 _module_path = "brokkr.inputs.gpiocounter"
 _class_name = "GPIOCounterInput"
+_dependencies = []
 name = "GPIO Counter Anemometer"
 max_counts = 100000
 gpio_kwargs.pull_up = true

@@ -22,7 +22,7 @@ si7021_humidity = { full_name = "Humidity (Si7021)", conversion = "custom", bina
 # The Adafruit Si7021 data input
 [inputs.si7021]
 _module_path = "brokkr.inputs.adafruiti2c"
-_class_name = "AdafruitI2CInput"
+_class_name = "AdafruitPersistantI2CInput"
 # Dependencies required by this specific input preset
 _dependencies = [ "adafruit-circuitpython-si7021" ]
 name = "Si7021 Temp & Humidity Sensor"
