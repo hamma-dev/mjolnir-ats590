@@ -1,0 +1,41 @@
+config_version = 1
+# Name of this device preset, used for lookup
+name = "anemometer_count"
+# Type of this preset; currently the only type is device
+type = "device"
+# Dependencies required by all inputs in this preset
+_dependencies = [ "gpiozero", "RPi.GPIO" ]
+
+# Preset-level metadata; format follows that specified in the top-level
+[metadata]
+name_full = "GPIO Pulse Count Anemometer Speed"
+author = "C.A.M. Gerlach"
+description = "Device preset for a pulse count anemometer measuring windspeed, calibrated by default to 1.00 m/s/pulse"
+homepage = "https://www.Gerlach.CAM"
+repo = "https://github.com/CAM-Gerlach"
+preset_version = "0.1.0"
+brokkr_version_min = "0.3.0"
+
+# Data type presets to use for the data types that follow
+[type_presets]
+wind_speed = { conversion = "custom", binary_type = "f", scale = 1.00, unit = "m/s", uncertainty = 1.0, digits = 2, range_min = 0 }
+
+# Data types referenced in individual presets
+[data_types]
+pulse_count_wind = { full_name = "Wind Speed Pulse Count", conversion = "int", binary_type = "i", unit = "", uncertainty = 1, custom_attrs.mean = false, range_min = 0 }
+wind_speed_gpio = { type_presets = "wind_speed", full_name = "Rain Rate" }
+wind_speed_gpio_3second = { type_presets = "wind_speed", full_name = "Wind Speed (3 s)", custom_attrs.period_s = 3, custom_attrs.mean = true }
+wind_speed_gpio_1minute = { type_presets = "wind_speed", full_name = "Wind Speed (1 min)", custom_attrs.period_s = 60, custom_attrs.mean = true }
+wind_speed_gpio_10minute = { type_presets = "wind_speed", full_name = "Wind Speed (10 min)", custom_attrs.period_s = 600, custom_attrs.mean = true }
+
+# Tipping bucket rain gauge input
+[inputs.anemometer_count]
+_module_path = "brokkr.inputs.gpiocounter"
+_class_name = "GPIOCounterInput"
+name = "GPIO Counter Anemometer"
+max_counts = 100000
+gpio_kwargs.pull_up = true
+data_types = [
+    "wind_speed_gpio_3second",
+    "wind_speed_gpio_10minute",
+]
