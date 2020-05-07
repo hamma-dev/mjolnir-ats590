@@ -78,6 +78,7 @@ monitor_input_steps = [
     "adafruit_mpl3115a2.inputs.mpl3115a2",
     "adafruit_bmp280.inputs.bmp280_i2c",
     "adafruit_bme280.inputs.bme280_i2c",
+    "adafruit_mlx90614.inputs.mlx90614",
     "dht11_input",
     "dht22_input",
     "ec5_input",
