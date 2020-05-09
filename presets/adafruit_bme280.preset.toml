@@ -16,9 +16,9 @@ brokkr_version_min = "0.3.0"
 
 # Data types referenced in individual presets
 [data_types]
-bme280_temperature = { full_name = "Temperature (BME280)", conversion = "custom", binary_type = "f", unit = "C", uncertainty = 1.0, custom_attrs.property_name = "temperature", digits = 3, range_min = 0, range_max = 65 }
-bme280_pressure = { full_name = "Pressure (BME280)", conversion = "custom", binary_type = "f", unit = "hPa", uncertainty = 1.0, custom_attrs.property_name = "pressure", digits = 3, range_min = 300, range_max = 1100 }
-bme280_humidity = { full_name = "Humidity (BME280)", conversion = "custom", binary_type = "f", unit = "%", uncertainty = 3.0, custom_attrs.property_name = "humidity", digits = 3, range_min = 10, range_max = 90 }
+bme280_temperature = { full_name = "Temperature (BME280)", binary_type = "f", unit = "C", uncertainty = 1.0, custom_attrs.property_name = "temperature", digits = 3, range_min = 0, range_max = 65 }
+bme280_pressure = { full_name = "Pressure (BME280)", binary_type = "f", unit = "hPa", uncertainty = 1.0, custom_attrs.property_name = "pressure", digits = 3, range_min = 300, range_max = 1100 }
+bme280_humidity = { full_name = "Humidity (BME280)", binary_type = "f", unit = "%", uncertainty = 3.0, custom_attrs.property_name = "humidity", digits = 3, range_min = 10, range_max = 90 }
 
 # Adafruit BME280 I2C input
 [inputs.bme280_i2c]

@@ -18,7 +18,7 @@ brokkr_version_min = "0.3.0"
 
 # Data type presets to use for the data types that follow
 [type_presets]
-wind_speed = { conversion = "custom", binary_type = "f", scale = 1.00, unit = "m/s", uncertainty = 1.0, digits = 2, range_min = 0 }
+wind_speed = { binary_type = "f", unit = "m/s", uncertainty = 1.0, digits = 2, range_min = 0 }
 
 # Data types referenced in individual presets
 [data_types]

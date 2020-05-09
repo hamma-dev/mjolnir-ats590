@@ -17,8 +17,8 @@ preset_version = "0.1.0"
 brokkr_version_min = "0.3.0"
 
 [type_presets]
-dht_temperature = { conversion = "custom", binary_type = "f", unit = "C", custom_attrs.property_name = "temperature", digits = 3 }
-dht_humidity = { conversion = "custom", binary_type = "f", unit = "%", custom_attrs.property_name = "humidity", digits = 3 }
+dht_temperature = { binary_type = "f", unit = "C", custom_attrs.property_name = "temperature", digits = 3 }
+dht_humidity = { binary_type = "f", unit = "%", custom_attrs.property_name = "humidity", digits = 3 }
 
 # Data types referenced in individual presets
 [data_types]

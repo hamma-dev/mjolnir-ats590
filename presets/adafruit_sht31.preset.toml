@@ -16,8 +16,8 @@ brokkr_version_min = "0.3.0"
 
 # Data types referenced in individual presets
 [data_types]
-sht31_temperature = { full_name = "Temperature (SHT31-D)", conversion = "custom", binary_type = "f", unit = "C", uncertainty = 0.3, custom_attrs.property_name = "temperature", digits = 3, range_min = -40, range_max = 125 }
-sht31_humidity = { full_name = "Humidity (SHT31-D)", conversion = "custom", binary_type = "f", unit = "%", uncertainty = 2.0, custom_attrs.property_name = "relative_humidity", digits = 3, range_min = 0, range_max = 100 }
+sht31_temperature = { full_name = "Temperature (SHT31-D)", binary_type = "f", unit = "C", uncertainty = 0.3, custom_attrs.property_name = "temperature", digits = 3, range_min = -40, range_max = 125 }
+sht31_humidity = { full_name = "Humidity (SHT31-D)", binary_type = "f", unit = "%", uncertainty = 2.0, custom_attrs.property_name = "relative_humidity", digits = 3, range_min = 0, range_max = 100 }
 
 # The Adafruit SHT31-D data input
 [inputs.sht31d]

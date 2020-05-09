@@ -16,8 +16,8 @@ brokkr_version_min = "0.3.0"
 
 # Data types referenced in individual presets
 [data_types]
-si7021_temperature = { full_name = "Temperature (Si7021)", conversion = "custom", binary_type = "f", unit = "C", uncertainty = 0.4, custom_attrs.property_name = "temperature", digits = 3, range_min = -10, range_max = 85 }
-si7021_humidity = { full_name = "Humidity (Si7021)", conversion = "custom", binary_type = "f", unit = "%", uncertainty = 3.0, custom_attrs.property_name = "relative_humidity", digits = 3, range_min = 0, range_max = 80 }
+si7021_temperature = { full_name = "Temperature (Si7021)", binary_type = "f", unit = "C", uncertainty = 0.4, custom_attrs.property_name = "temperature", digits = 3, range_min = -10, range_max = 85 }
+si7021_humidity = { full_name = "Humidity (Si7021)", binary_type = "f", unit = "%", uncertainty = 3.0, custom_attrs.property_name = "relative_humidity", digits = 3, range_min = 0, range_max = 80 }
 
 # The Adafruit Si7021 data input
 [inputs.si7021]
