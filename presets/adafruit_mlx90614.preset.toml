@@ -16,8 +16,8 @@ brokkr_version_min = "0.3.0"
 
 # Data types referenced in individual presets
 [data_types]
-mlx90614_ambient_temperature = { full_name = "Ambient Temperature (MLX90614)", binary_type = "f", unit = "C", uncertainty = 0.5, custom_attrs.property_name = "ambient_temperature", digits = 3, range_min = -40, range_max = 125 }
-mlx90614_object_temperature = { full_name = "Object Temperature (MLX90614)",  binary_type = "f", unit = "C", uncertainty = 0.5, custom_attrs.property_name = "object_temperature", digits = 3, range_min = -70, range_max = 380 }
+mlx90614_ambient_temperature = { full_name = "Ambient Temperature (MLX90614)", binary_type = "f", unit = "C", uncertainty = 0.5, custom_attrs.attribute_name = "ambient_temperature", digits = 3, range_min = -40, range_max = 125 }
+mlx90614_object_temperature = { full_name = "Object Temperature (MLX90614)",  binary_type = "f", unit = "C", uncertainty = 0.5, custom_attrs.attribute_name = "object_temperature", digits = 3, range_min = -70, range_max = 380 }
 
 # The Adafruit MLX90614 data input
 [inputs.mlx90614]

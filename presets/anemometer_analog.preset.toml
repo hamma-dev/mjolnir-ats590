@@ -16,7 +16,7 @@ brokkr_version_min = "0.3.0"
 
 # Data types referenced in individual presets
 [data_types]
-anemometer_direction = { conversion = "custom", binary_type = "f", unit = "degrees", custom_attrs.property_name = "voltage", digits = 2, full_name = "Anemometer Direction", scale = 0.0032014, offset = 4.66, base = 2, power = 15, range_min = 0, range_max = 360 }
+anemometer_direction = { conversion = "custom", binary_type = "f", unit = "degrees", custom_attrs.attribute_name = "voltage", digits = 2, full_name = "Anemometer Direction", scale = 0.0032014, offset = 4.66, base = 2, power = 15, range_min = 0, range_max = 360 }
 
 [inputs.wind_direction_ads1015]
 _module_path = "brokkr.inputs.adafruitadc"

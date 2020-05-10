@@ -16,8 +16,8 @@ brokkr_version_min = "0.3.0"
 
 # Data types referenced in individual presets
 [data_types]
-bmp280_temperature = { full_name = "Temperature (BMP280)", binary_type = "f", unit = "C", uncertainty = 0.3, custom_attrs.property_name = "temperature", digits = 3, range_min = -20, range_max = 65 }
-bmp280_pressure = { full_name = "Pressure (BMP280)", binary_type = "f", unit = "hPa", uncertainty = 1.0, custom_attrs.property_name = "pressure", digits = 3, range_min = 300, range_max = 1100 }
+bmp280_temperature = { full_name = "Temperature (BMP280)", binary_type = "f", unit = "C", uncertainty = 0.3, custom_attrs.attribute_name = "temperature", digits = 3, range_min = -20, range_max = 65 }
+bmp280_pressure = { full_name = "Pressure (BMP280)", binary_type = "f", unit = "hPa", uncertainty = 1.0, custom_attrs.attribute_name = "pressure", digits = 3, range_min = 300, range_max = 1100 }
 
 # Adafruit BMP280 I2C input
 [inputs.bmp280_i2c]

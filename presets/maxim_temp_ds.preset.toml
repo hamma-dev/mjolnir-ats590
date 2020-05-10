@@ -18,7 +18,7 @@ brokkr_version_min = "0.3.0"
 
 # Data types referenced in individual presets
 [data_types]
-maxim_ds_temperature = { full_name = "Temperature (DSxxxx)", binary_type = "f", unit = "C", uncertainty = 0.5, custom_attrs.function_name = "get_temperature", digits = 3, range_min = -55, range_max = 125 }
+maxim_ds_temperature = { full_name = "Temperature (DSxxxx)", binary_type = "f", unit = "C", uncertainty = 0.5, custom_attrs.attribute_name = "get_temperature", digits = 3, range_min = -55, range_max = 125 }
 
 # The main Maxim DSxxxx data input
 [inputs.dsxxxx]

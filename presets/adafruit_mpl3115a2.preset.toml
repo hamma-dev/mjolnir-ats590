@@ -16,8 +16,8 @@ brokkr_version_min = "0.3.0"
 
 # Data types referenced in individual presets
 [data_types]
-mpl3115a2_temperature = { full_name = "Temperature (MPL3115A2)", binary_type = "f", unit = "C", uncertainty = 3.0, custom_attrs.property_name = "temperature", digits = 3, range_min = -40, range_max = 85 }
-mpl3115a2_pressure = { full_name = "Pressure (MPL3115A2)", binary_type = "f", unit = "hPa", uncertainty = 0.4, custom_attrs.property_name = "pressure", digits = 3, range_min = 200, range_max = 1100 }
+mpl3115a2_temperature = { full_name = "Temperature (MPL3115A2)", binary_type = "f", unit = "C", uncertainty = 3.0, custom_attrs.attribute_name = "temperature", digits = 3, range_min = -40, range_max = 85 }
+mpl3115a2_pressure = { full_name = "Pressure (MPL3115A2)", binary_type = "f", unit = "hPa", uncertainty = 0.4, custom_attrs.attribute_name = "pressure", digits = 3, range_min = 200, range_max = 1100 }
 
 # Adafruit MPL3115A2 I2C input
 [inputs.mpl3115a2]
