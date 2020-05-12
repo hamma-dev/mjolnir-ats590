@@ -18,15 +18,15 @@ brokkr_version_min = "0.3.0"
 
 # Data type presets to use for the data types that follow
 [type_presets]
-rain_rate = { conversion = "custom", binary_type = "f", scale = 1829, unit = "mm/h", uncertainty = 0.5, digits = 2, range_min = 0 }
+rain_rate = { conversion = "custom", binary_type = "f", scale = 1829, unit = "mm/h", uncertainty = 0.5, digits = 2, range_min = 0, custom_attrs.mean = true }
 
 # Data types referenced in individual presets
 [data_types]
 tip_count_tipb = { full_name = "Tipping Bucket Count", conversion = "int", binary_type = "i", unit = "", uncertainty = 1, custom_attrs.mean = false, range_min = 0 }
 rain_rate_tibp = { type_presets = "rain_rate", full_name = "Rain Rate" }
-rain_rate_tibp_1minute = { type_presets = "rain_rate", full_name = "Rain Rate (1 min)", custom_attrs.period_s = 60, custom_attrs.mean = true }
-rain_rate_tibp_5minute = { type_presets = "rain_rate", full_name = "Rain Rate (5 min)", custom_attrs.period_s = 300, custom_attrs.mean = true }
-rain_rate_tibp_1hour = { type_presets = "rain_rate", full_name = "Rain Rate (1 h)", custom_attrs.period_s = 3600, custom_attrs.mean = true }
+rain_rate_tibp_1minute = { type_presets = "rain_rate", full_name = "Rain Rate (1 min)", custom_attrs.period_s = 60 }
+rain_rate_tibp_5minute = { type_presets = "rain_rate", full_name = "Rain Rate (5 min)", custom_attrs.period_s = 300 }
+rain_rate_tibp_1hour = { type_presets = "rain_rate", full_name = "Rain Rate (1 h)", custom_attrs.period_s = 3600 }
 
 # Tipping bucket rain gauge input
 [inputs.raingauge_tipb]

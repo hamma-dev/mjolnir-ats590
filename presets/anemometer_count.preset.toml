@@ -18,15 +18,15 @@ brokkr_version_min = "0.3.0"
 
 # Data type presets to use for the data types that follow
 [type_presets]
-wind_speed = { binary_type = "f", unit = "m/s", uncertainty = 1.0, digits = 2, range_min = 0 }
+wind_speed = { binary_type = "f", unit = "m/s", uncertainty = 1.0, digits = 2, range_min = 0, custom_attrs.mean = true }
 
 # Data types referenced in individual presets
 [data_types]
 pulse_count_wind = { full_name = "Wind Speed Pulse Count", conversion = "int", binary_type = "i", unit = "", uncertainty = 1, custom_attrs.mean = false, range_min = 0 }
 wind_speed_gpio = { type_presets = "wind_speed", full_name = "Rain Rate" }
-wind_speed_gpio_3second = { type_presets = "wind_speed", full_name = "Wind Speed (3 s)", custom_attrs.period_s = 3, custom_attrs.mean = true }
-wind_speed_gpio_1minute = { type_presets = "wind_speed", full_name = "Wind Speed (1 min)", custom_attrs.period_s = 60, custom_attrs.mean = true }
-wind_speed_gpio_10minute = { type_presets = "wind_speed", full_name = "Wind Speed (10 min)", custom_attrs.period_s = 600, custom_attrs.mean = true }
+wind_speed_gpio_3second = { type_presets = "wind_speed", full_name = "Wind Speed (3 s)", custom_attrs.period_s = 3 }
+wind_speed_gpio_1minute = { type_presets = "wind_speed", full_name = "Wind Speed (1 min)", custom_attrs.period_s = 60 }
+wind_speed_gpio_10minute = { type_presets = "wind_speed", full_name = "Wind Speed (10 min)", custom_attrs.period_s = 600 }
 
 # Tipping bucket rain gauge input
 [inputs.anemometer_count]
